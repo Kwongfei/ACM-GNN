@@ -52,13 +52,16 @@ if args.dataset_name == "deezer-europe":
     lr = [0.002, 0.01, 0.05]
     weight_decay = [0, 5e-6, 1e-5, 5e-5, 1e-4, 5e-4, 1e-3]
 else:
-    lr = [0.01, 0.05, 0.1]
-    weight_decay = [0, 5e-6, 1e-5, 5e-5, 1e-4, 5e-4, 1e-3, 5e-3, 1e-2]
+    # lr = [0.01, 0.05, 0.1]
+    # weight_decay = [0, 5e-6, 1e-5, 5e-5, 1e-4, 5e-4, 1e-3, 5e-3, 1e-2]
+    lr = [0.01]
+    weight_decay = [0, 1e-5, 1e-4, 1e-3, 1e-2]
 
 if args.model == "acmsgc":
     dropout = [0.0]
 else:
-    dropout = [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9]
+    # dropout = [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9]
+    dropout = [0, 0.2, 0.5, 0.8]
 
 
 criterion = nn.NLLLoss()
