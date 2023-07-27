@@ -1,0 +1,1 @@
+python train.py --model acmgcnpp --dataset_name cora --lr 0.01 --weight_decay 0.01 --dropout 0.8

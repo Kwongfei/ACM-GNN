@@ -3,7 +3,7 @@ from os import path
 import pickle as pkl
 import sys
 
-from google_drive_downloader import GoogleDriveDownloader as gdd
+# from google_drive_downloader import GoogleDriveDownloader as gdd
 import networkx as nx
 import numpy as np
 import scipy.sparse as sp
@@ -469,8 +469,8 @@ def random_disassortative_splits(labels, num_classes):
         index = torch.nonzero((labels == i)).view(-1)
         index = index[torch.randperm(index.size(0))]
         indices.append(index)
-    percls_trn = int(round(0.6 * (labels.size()[0] / num_classes)))
-    val_lb = int(round(0.2 * labels.size()[0]))
+    percls_trn = int(round(0.03606853 * (labels.size()[0] / num_classes)))
+    val_lb = int(round(0.1503 * labels.size()[0]))
     train_index = torch.cat([i[:percls_trn] for i in indices], dim=0)
 
     rest_index = torch.cat([i[percls_trn:] for i in indices], dim=0)

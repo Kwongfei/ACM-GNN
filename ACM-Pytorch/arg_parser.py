@@ -63,7 +63,7 @@ def arg_parser():
     parser.add_argument(
         "--link_init_layers_X", type=int, default=1, help="Number of initial layer"
     )
-    parser.add_argument("--dataset_name", type=str, help="Dataset name.", default="cornell")
+    parser.add_argument("--dataset_name", type=str, help="Dataset name.", default="cora")
     parser.add_argument(
         "--dropout", type=float, default=0, help="Dropout rate (1 - keep probability)."
     )
