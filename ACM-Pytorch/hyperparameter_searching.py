@@ -24,6 +24,9 @@ from utils import (
 logger = ACMPythorchLogger()
 args = arg_parser()
 
+args.model = 'sgc'
+args.dataset_name = 'cora'
+
 (
     device,
     model_info,
@@ -61,7 +64,7 @@ if args.model == "acmsgc":
     dropout = [0.0]
 else:
     # dropout = [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9]
-    dropout = [0, 0.2, 0.5, 0.8]
+    dropout = [0, 0.2, 0.5]
 
 
 criterion = nn.NLLLoss()
